@@ -33,7 +33,7 @@ const Login = () => {
       .then((result) => {
         console.log(result.user);
         Swal.fire("Good Job", "Login SuccessFull", "success");
-        navegate(location?.state ? location.state : "/");
+        navegate(location?.state ? location.state : "/dashboard");
       })
       .catch((error) => {
         Swal.fire(
@@ -50,7 +50,7 @@ const Login = () => {
       .then((result) => {
         console.log(result.user);
         Swal.fire("Good Job", "Login SuccessFull", "success");
-        navegate(location?.state ? location.state : "/");
+        navegate(location?.state ? location.state : "/dashboard");
       })
       .catch((error) => {
         Swal.fire(
@@ -67,21 +67,12 @@ const Login = () => {
       <Helmet>
         <title>Tech Globe Hub | Login</title>
       </Helmet>
-      <div  className="flex justify-center items-center md:mt-52 mt-5 px-3  ">
+      <div className="flex  h-screen justify-center items-center gap-10 bg-slate-900 text-white">
         <div className="flex flex-col w-full max-w-md px-4 py-8  rounded-lg shadow  sm:px-6 md:px-8 lg:px-10 border ">
-          <div className="self-center mb-6 text-xl font-light  sm:text-2xl ">
+          <div className="self-center mb-6 text-white text-xl  font-bold  sm:text-2xl ">
             Login To Your Account
           </div>
-          <div className="flex gap-4 item-center">
-            <button
-              onClick={handleGoopleLogin}
-              type="button"
-              className="py-2 px-4 border flex justify-center items-center focus:ring-gray-400-500 hover:bg-slate-100   w-full transition ease-in duration-200 text-center text-xl font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg "
-            >
-              <FcGoogle className="mr-3 text-3xl"></FcGoogle>
-              Google
-            </button>
-          </div>
+
           <div className="mt-8">
             <form onSubmit={hanledLogin} autoComplete="off">
               <div className="flex flex-col mb-2">
@@ -101,7 +92,7 @@ const Login = () => {
                     type="email"
                     name="email"
                     id="sign-in-email"
-                    className=" rounded-r-lg flex-1 appearance-none border  w-full py-2 px-4  placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                    className=" rounded-r-lg flex-1 appearance-none border  w-full py-2 px-4  placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 text-black focus:ring-purple-600 focus:border-transparent"
                     placeholder="Your email"
                   />
                 </div>
@@ -123,7 +114,7 @@ const Login = () => {
                     type="password"
                     name="password"
                     id="sign-in-email"
-                    className=" rounded-r-lg flex-1 appearance-none border  w-full py-2 px-4  te placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
+                    className=" rounded-r-lg flex-1 appearance-none border text-black w-full py-2 px-4  te placeholder-gray-400 shadow-sm text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
                     placeholder="Your password"
                   />
                 </div>
@@ -149,19 +140,37 @@ const Login = () => {
               </div>
             </form>
           </div>
+          <div className="flex gap-4 item-center mt-4">
+            <button
+              onClick={handleGoopleLogin}
+              type="button"
+              className="py-2 px-4 border flex justify-center items-center focus:ring-gray-400-500 hover:bg-slate-100   w-full transition ease-in duration-200 text-center text-xl font-semibold shadow-md focus:outline-none focus:ring-2 focus:ring-offset-2  rounded-lg "
+            >
+              <FcGoogle className="mr-3 text-3xl"></FcGoogle>
+              Google
+            </button>
+          </div>
           <div className="flex items-center justify-center mt-6">
             <Link
               to="/register"
               className="inline-flex items-center text-xs font-thin text-center  "
             >
               <span className="ml-2 text-base ">
-                You don&#x27;t have an account <span className="font-bold text-green-600 underline">Register</span>?
+                You don&#x27;t have an account{" "}
+                <span className="font-bold text-green-600 underline">
+                  Register
+                </span>
+                ?
               </span>
             </Link>
           </div>
         </div>
-      </div>
-      <div className="md:mt-40 mt-6">
+        {/* <div className="w-full">
+          <img
+            src="https://i.ibb.co/LS2C04t/top-view-break-time-written-sticky-note-list-black-notepad-phone-pen-calculator-ruler-binder-clips-k.jpg"
+            className="h-screen min-w-full rounded-lg shadow-2xl"
+          />
+        </div> */}
       </div>
     </div>
   );

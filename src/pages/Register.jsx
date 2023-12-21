@@ -63,7 +63,7 @@ const Register = () => {
       .then((result) => {
         console.log(result.user);
         Swal.fire("Good Job", "Login SuccessFull", "success");
-        navegate(location?.state ? location.state : "/");
+        navegate(location?.state ? location.state : "/dashboard");
       })
       .catch((error) => {
         Swal.fire(
@@ -82,7 +82,7 @@ const Register = () => {
       </Helmet>
       <div className="flex flex-col w-full md:w-1/2 m-auto md:mt-24">
         <div className="flex justify-center pt-12 md:justify-start md:pl-12 md:-mb-24"></div>
-        <div className="flex flex-col justify-center px-8 pt-8 my-auto md:justify-start md:pt-0 md:px-24 lg:px-32  border ">
+        <div className="flex flex-col justify-center px-8 pt-8 my-auto md:justify-start md:pt-0 md:px-24 lg:px-32 border ">
           <p className="text-3xl text-center mt-7">Register</p>
 
           <form

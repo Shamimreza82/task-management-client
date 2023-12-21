@@ -8,19 +8,21 @@ const Banner = () => {
         className="hero h-[calc(100vh-136px)]"
         style={{
           backgroundImage:
-            "url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg)",
+            "url(https://i.ibb.co/L6xtd3B/designer-work-office.jpg)",
         }}
       >
-        <div className="hero-overlay bg-opacity-60"></div>
+        <div className="hero-overlay "></div>
         <div className="hero-content text-center text-neutral-content">
           <div className="max-w-md">
-            <h1 className="mb-5 text-5xl font-bold">Let’s Explore</h1>
-            <p className="mb-5">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
+            <h1 className="mb-5 text-4xl font-bold">Optimize Your Workflow with Streamline, Sync, Succeed!</h1>
+            <p className="mb-5 w-full">
+              TaskSync Pro revolutionizes productivity by seamlessly integrating
+              task management across all devices and platforms. Say goodbye to
+              scattered to-do lists and welcome a unified, efficient workflow.
             </p>
-            <Link to="/login" className="btn btn-primary">Let’s Explore</Link>
+            <Link to="/login" className="btn bg-green-500 border-none  hover:bg-green-600 text-white ">
+              Let’s Explore
+            </Link>
           </div>
         </div>
       </div>
