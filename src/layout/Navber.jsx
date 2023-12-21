@@ -1,6 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
+import { AuthContext } from "../AuthProvider/AuthProvider";
 
 const Navber = () => {
+
+  const { user } = useContext(AuthContext);
+
+  console.log(user);
+
+
   return (
     <div>
       <div className="drawer">
@@ -29,13 +37,16 @@ const Navber = () => {
                 </svg>
               </label>
             </div>
-            <div className="flex-1 px-2 mx-2">Navbar Title</div>
+            <div className="flex-1 px-2 mx-2">TaskSync Pro</div>
             <div className="flex-none hidden lg:block">
               <ul className="menu menu-horizontal">
                 {/* Navbar menu content here */}
-                <li>
-                  <a>Navbar Item 1</a>
-                </li>
+                { user ? <li>
+                  <Link to="/login">Logout</Link>
+                </li> : <li>
+                  <Link to="/login">Login</Link>
+                </li>}
+
                 <li>
                   <a>Navbar Item 2</a>
                 </li>
