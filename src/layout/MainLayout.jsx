@@ -1,9 +1,10 @@
-import React from 'react';
+
+import Navber from './Navber';
 
 const MainLayout = () => {
     return (
         <div>
-            <h1>main Lay Out</h1>
+            <Navber></Navber>
         </div>
     );
 };
