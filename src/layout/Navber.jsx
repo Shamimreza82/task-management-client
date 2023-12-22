@@ -1,6 +1,8 @@
 import React, { useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, Button, Element, Events, animateScroll as scroll, scrollSpy } from 'react-scroll';
+import {NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../AuthProvider/AuthProvider";
+
 
 const Navber = () => {
   const { user, logeOut } = useContext(AuthContext);
@@ -42,41 +44,51 @@ const Navber = () => {
               </label>
             </div>
             <div className="flex-1 px-2 mx-2 text-xl font-bold">
-            SCC Technovision Inc
+              SCC Technovision Inc
             </div>
             <div className="flex-none hidden lg:block ">
               <ul className="menu menu-horizontal ">
                 {/* Navbar menu content here */}
-                {user ? (
-                  <li>
-                    <Link onClick={handleLogout} to="/login">
-                      Logout
-                    </Link>
-                  </li>
-                ) : (
-                  <li>
-                    <Link to="/login">Login</Link>
-                  </li>
-                )}
+               
                 <li>
-               <Link
-                  activeClass="active"
-                  to="test1"
-                  spy={true}
-                  smooth={true}
-                  offset={50}
-                  duration={500}
-                >
-                  About
-                </Link>
-               </li>
-
+                  <Link
+                    activeClass="active"
+                    to="about"
+                    spy={true}
+                    smooth={true}
+                    offset={50}
+                    duration={500}
+                  >
+                    About
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    activeClass="active"
+                    to="contact"
+                    spy={true}
+                    smooth={true}
+                    offset={50}
+                    duration={500}
+                  >
+                    Contact
+                  </Link>
+                </li>
                 {user && (
                   <li>
-                    <Link to="/dashboard">Dashboard</Link>
+                    <NavLink to="/dashboard">Dashboard</NavLink>{" "}
                   </li>
                 )}
-               
+                 {user ? (
+                  <li className="bg-slate-800 rounded-md">
+                    <button   onClick={handleLogout}>Logout</button>
+                  </li>
+                ) : (
+                  <li className="bg-slate-800 rounded-md">
+                    {" "}
+                    <NavLink to="/login">Login</NavLink>{" "}
+                  </li>
+                )}
               </ul>
             </div>
           </div>

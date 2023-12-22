@@ -6,6 +6,7 @@ import Dashboard from "../dashboard/Dashboard";
 import DashHome from "../dashboard/DashHome";
 import NewTask from "../dashboard/NewTask";
 import PreviousTask from "../dashboard/PreviousTask";
+import About from "../pages/About";
 
 
 
@@ -13,7 +14,14 @@ import PreviousTask from "../dashboard/PreviousTask";
 const router = createBrowserRouter([
     {
         path: '/', 
-        element: <MainLayout></MainLayout>
+        element: <MainLayout></MainLayout>, 
+        children: [
+            {
+                path: '/about', 
+                element: <About></About>
+            }
+        ]
+        
     }, 
     {
         path: '/login', 

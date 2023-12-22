@@ -1,10 +1,10 @@
-import React from "react";
+
 import { Helmet } from "react-helmet";
 
 const Contact = () => {
   return (
     <div>
-      <div className="bg-gray-50">
+      <div id="contact" className="bg-gray-50">
         <Helmet>
           {" "}
           <title>SCC Technovision Inc. | Contact Us</title>
@@ -12,7 +12,7 @@ const Contact = () => {
         <section className="text-gray-600 body-font relative">
           <div className="container px-5 py-24 mx-auto">
             <div className="flex flex-col text-center w-full mb-12">
-              <h1 className="sm:text-3xl text-2xl title-font mb-4 text-zinc-800 font-bold">
+              <h1 data-aos="zoom-in-down" data-aos-duration="1000"  className="sm:text-3xl text-2xl title-font mb-4 text-zinc-800 font-bold">
                 Contact Us
               </h1>
               <p className="lg:w-2/3 mx-auto leading-relaxed text-base">
@@ -70,7 +70,7 @@ const Contact = () => {
                   </div>
                 </div>
                 <div className="p-2 w-full">
-                  <button className="flex mx-auto text-white bg-green-600 border-0 py-2 px-8 focus:outline-none hover:bg-gray-500 rounded text-lg">
+                  <button data-aos="zoom-in-down"  className="flex mx-auto text-white bg-green-600 border-0 py-2 px-8 focus:outline-none hover:bg-gray-500 rounded text-lg">
                     Submit
                   </button>
                 </div>

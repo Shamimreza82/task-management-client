@@ -14,13 +14,26 @@ const Banner = () => {
         <div className="hero-overlay "></div>
         <div className="hero-content text-center text-neutral-content">
           <div className="max-w-md">
-            <h1 className="mb-5 text-4xl font-bold">Optimize Your Workflow with Streamline, Sync, Succeed!</h1>
+            <h1
+              className="mb-5 text-4xl font-bold"
+              data-aos="fade-up"
+              data-aos-anchor-placement="top-bottom"
+              data-aos-duration="1000"
+            >
+              Optimize Your Workflow with Streamline, Sync, Succeed!
+            </h1>
             <p className="mb-5 w-full">
-            SCC Technovision Inc revolutionizes productivity by seamlessly integrating
-              task management across all devices and platforms. Say goodbye to
-              scattered to-do lists and welcome a unified, efficient workflow.
+              SCC Technovision Inc revolutionizes productivity by seamlessly
+              integrating task management across all devices and platforms. Say
+              goodbye to scattered to-do lists and welcome a unified, efficient
+              workflow.
             </p>
-            <Link to="/login" className="btn bg-green-500 border-none  hover:bg-green-600 text-white ">
+            <Link
+              to="/login"
+              className="btn bg-green-500 border-none  hover:bg-green-600 text-white "
+              data-aos="zoom-in"
+              data-aos-duration="1000"
+            >
               Let’s Explore
             </Link>
           </div>

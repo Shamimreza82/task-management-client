@@ -26,12 +26,13 @@ const NewTask = () => {
             description: data.description,
             priority: data.priority,
             date: data.date,
-            status: 'active'
+            status: 'todo',
+            todo: 'todos'
         }
 
         
         try {
-            axios.post('http://localhost:5000/allTask', task )  
+            axios.post('https://task-management-server-orpin.vercel.app/allTask', task )  
             .then(res => {
                 console.log(res.data);
                 Swal.fire({
