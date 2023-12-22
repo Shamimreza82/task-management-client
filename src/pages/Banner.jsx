@@ -5,7 +5,7 @@ const Banner = () => {
   return (
     <div>
       <div
-        className="hero h-[calc(100vh-136px)]"
+        className="hero h-[calc(100vh-65px)]"
         style={{
           backgroundImage:
             "url(https://i.ibb.co/L6xtd3B/designer-work-office.jpg)",
@@ -16,7 +16,7 @@ const Banner = () => {
           <div className="max-w-md">
             <h1 className="mb-5 text-4xl font-bold">Optimize Your Workflow with Streamline, Sync, Succeed!</h1>
             <p className="mb-5 w-full">
-              TaskSync Pro revolutionizes productivity by seamlessly integrating
+            SCC Technovision Inc revolutionizes productivity by seamlessly integrating
               task management across all devices and platforms. Say goodbye to
               scattered to-do lists and welcome a unified, efficient workflow.
             </p>

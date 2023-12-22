@@ -5,6 +5,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
+
 const NewTask = () => {
 
     const {user} = useContext(AuthContext)
@@ -30,7 +31,7 @@ const NewTask = () => {
 
         
         try {
-            axios.post('https://task-management-server-orpin.vercel.app/allTask', task )  
+            axios.post('http://localhost:5000/allTask', task )  
             .then(res => {
                 console.log(res.data);
                 Swal.fire({
